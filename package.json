@@ -1,0 +1,18 @@
+{
+  "name": "lambda-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy" : "yarn zip && aws lambda update-function-code --function-name idk --zip-file fileb://test.zip",
+    "zip": "zip -r test.zip ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.256.0",
+    "@aws-sdk/util-dynamodb": "^3.256.0",
+    "aws-sdk": "^2.1297.0"
+  }
+}
